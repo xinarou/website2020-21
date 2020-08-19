@@ -32,16 +32,15 @@ const CardContainer = styled.div`
 .Card{
     position:relative;
     margin:20px 8px 20px 20px;
-}
-.Card ul li{
-  list-style: none;
-}
-.Card .inner-box{    
-    position:relative;
-    padding:40px 40px 60px 0px;
-}
 
-.Card .inner-box:before{
+    ul li{
+      list-style: none;
+    }
+     
+.inner-box{    
+  position:relative;
+  padding:40px 40px 60px 0px;
+    :before{
     position:absolute;
     content:'';
     right:0px;
@@ -55,9 +54,8 @@ const CardContainer = styled.div`
     -ms-transition:all 600ms ease;
     -o-transition:all 600ms ease;
     transition:all 600ms ease;
-}
-
-.Card .inner-box::after{
+  }
+    ::after{
     position:absolute;
     content:'';
     top:0px;
@@ -70,97 +68,65 @@ const CardContainer = styled.div`
     -ms-transition:all 600ms ease;
     -o-transition:all 600ms ease;
     transition:all 600ms ease;
-    
-    background : #cf0739;/* the transition color*/
-}
-
-.Card .inner-box:hover::after{
+    background-image: linear-gradient(0deg, #ff8a00, #e52e71);/* the transition color*/
+  }
+    :hover::after{
     width:78.5%;
-}
-
-.Card .inner-box .social-icons{
+  }
+    .social-icons{
     position:absolute;
     right:25px;
     top:50px;
     z-index:1;
-}
-
-.Card .inner-box .social-icons li{
-    position:relative;
-    margin-bottom:20px;
-}
-
-.Card .inner-box .social-icons li a{
-    position:relative;
-    color:#c00b29;
-    font-size:18px;
-    -webkit-transition: all 0.4s;
-    -moz-transition: all 0.4s;
-    -o-transition: all 0.4s;
-    transition: all 0.4s;
-}
-
-.Card .inner-box:hover .content .name,
-.Card .inner-box:hover .social-icons li a,
-.Card .inner-box:hover .content .position,
-.Card .inner-box:hover .content .batch{
+      li{
+      position:relative;
+      margin-bottom:20px;
+        a{
+        position:relative;
+        color:#c00b29;
+        font-size:18px;
+        -webkit-transition: all 0.4s;
+        -moz-transition: all 0.4s;
+        -o-transition: all 0.4s;
+        transition: all 0.4s;
+      }
+    }
+  }
+    
+    :hover .content .name,:hover .social-icons li a,:hover .content .position,:hover .content .batch{
     color:#ffffff;
-}
-
-
-.Card .inner-box .image{
-  position:relative;
-  z-index:1;
-  weight :90%;
+  }
+    .image{
+    position:relative;
+    z-index:1;
+    weight :90%;
     border-radius:50%;
     display:inline-block;
   }
-
-
-.Card .inner-box .content{
+    .content{
     position:relative;
     text-align:left;
     z-index:1;
     padding:30px 15px 0px 110px;
+      .name{
+      color:#c70919;
+      font-size:18px;
+      font-weight:700;
+      line-height:1.3em;
+    }
+      .position{
+      margin-top:5px;
+      color:#393939;
+      font-size:14px;
+    }
+      .batch{
+        margin-top:5px;
+      }
 }
-
-.Card .inner-box .content .name{
-    position:relative;
-    color:#E20351;
-    font-size:18px;
-    font-weight:700;
-    line-height:1.3em;
 }
-
-.Card.inner-box .content .name{
-    position:relative;
-    color:#c70919;
-    -webkit-transition: all 0.4s;
-    -moz-transition: all 0.4s;
-    -o-transition: all 0.4s;
-    transition: all 0.4s;
 }
-
-.Card .inner-box .content .position{
-    position:relative;
-    margin-top:5px;
-    color:#393939;
-    font-size:14px;
-}
-
-.Card.style-two .inner-box .content .name,
-.Card.style-two .inner-box .social-icons li a{
-    color:#ff9600;
-}
-
-.Card.style-two .inner-box:hover .content .name,
-.Card.style-two .inner-box:hover .social-icons li a{
-    color:#ffffff;
-}
-
-
-  @media only screen and (max-width: 680px){
-
+.
+   @media only screen and (max-width: 680px){
     width: 75%;
     justify-content: center;
     
@@ -200,7 +166,7 @@ export default function Alumni() {
       <CardContainer>
         {data.allAlumniXlsxSheet1.edges.map((row, i) => (
           <div className="Card">
-          <div class="inner-box wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
+          <div class="inner-box " data-wow-delay="0ms" data-wow-duration="1500ms">
                         <ul class="social-icons">
                             <li><a href="#"><FontAwesomeIcon icon={faFacebook} size="1x" /></a></li>
                             <li><a href="#"><FontAwesomeIcon icon={faLinkedin} size="1x" /></a></li>
@@ -221,4 +187,3 @@ export default function Alumni() {
     </Flex>
   )
 }
-
