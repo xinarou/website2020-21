@@ -49,10 +49,6 @@ const CardContainer = styled.div`
     bottom:0px;
     border-radius:10px;
     background-color:#f5f5f5;
-    -webkit-transition:all 600ms ease;
-    -moz-transition:all 600ms ease;
-    -ms-transition:all 600ms ease;
-    -o-transition:all 600ms ease;
     transition:all 600ms ease;
   }
     ::after{
@@ -63,10 +59,6 @@ const CardContainer = styled.div`
     bottom:0px;
     width:0%;
     border-radius:10px;
-    -webkit-transition:all 600ms ease;
-    -moz-transition:all 600ms ease;
-    -ms-transition:all 600ms ease;
-    -o-transition:all 600ms ease;
     transition:all 600ms ease;
     background-image: linear-gradient(0deg, #ff8a00, #e52e71);/* the transition color*/
   }
@@ -79,15 +71,9 @@ const CardContainer = styled.div`
     top:50px;
     z-index:1;
       li{
-      position:relative;
       margin-bottom:20px;
         a{
-        position:relative;
         color:#c00b29;
-        font-size:18px;
-        -webkit-transition: all 0.4s;
-        -moz-transition: all 0.4s;
-        -o-transition: all 0.4s;
         transition: all 0.4s;
       }
     }
