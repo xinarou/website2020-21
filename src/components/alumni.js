@@ -40,7 +40,8 @@ const CardContainer = styled.div`
 .inner-box{    
   position:relative;
   padding:40px 40px 60px 0px;
-    :before{
+    
+   :before{
     position:absolute;
     content:'';
     right:0px;
@@ -62,14 +63,17 @@ const CardContainer = styled.div`
     transition:all 600ms ease;
     background-image: linear-gradient(0deg, #ff8a00, #e52e71);/* the transition color*/
   }
+
     :hover::after{
     width:78.5%;
   }
+
     .social-icons{
     position:absolute;
     right:25px;
     top:50px;
     z-index:1;
+      
       li{
       margin-bottom:20px;
         a{
@@ -77,11 +81,13 @@ const CardContainer = styled.div`
         transition: all 0.4s;
       }
     }
+  
   }
     
     :hover .content .name,:hover .social-icons li a,:hover .content .position,:hover .content .batch{
     color:#ffffff;
   }
+
     .image{
     position:relative;
     z-index:1;
@@ -89,25 +95,28 @@ const CardContainer = styled.div`
     border-radius:50%;
     display:inline-block;
   }
+
     .content{
     position:relative;
     text-align:left;
     z-index:1;
     padding:30px 15px 0px 110px;
-      .name{
+       
+    .name{
       color:#c70919;
       font-size:18px;
       font-weight:700;
       line-height:1.3em;
     }
-      .position{
+    .position{
       margin-top:5px;
       color:#393939;
       font-size:14px;
     }
-      .batch{
+    .batch{
         margin-top:5px;
       }
+      
 }
 }
 }
