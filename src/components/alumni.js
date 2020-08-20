@@ -39,7 +39,7 @@ const CardContainer = styled.div`
      
 .inner-box{    
   position:relative;
-  padding:40px 40px 60px 0px;
+  padding:40px 40px 35px 0px;
     
    :before{
     position:absolute;
