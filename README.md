@@ -71,7 +71,7 @@ in the master branch:
 `git pull upstream --rebase master`
 
 ## Styling
-The project is currently set up to support both CSS ans SASS. It is strongly recommended to use SASS always.
+The project is presently set up to support both CSS ans SASS. It is strongly recommended to use SASS always.
 Use inline styling fot components if you can get away with it but feel free to make a separate SASS module and import it into your component.
 Try not to duplicate the style properties use the power of inheritance!
 
